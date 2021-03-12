@@ -337,34 +337,59 @@
             Вы можете забрать товар сами,<br> 
             заехав в наш офис:
           </p>
-          <a href="">
-            <img class="map" src="img/Objectmap.png" width="300" height="158" alt="ул.Б.Конюшенная,д.19/8">
+          <a class="map" href="#">
+            <img src="img/Objectmap.png" width="300" height="158" alt="ул.Б.Конюшенная,д.19/8">
           </a>
           <button class="contact button" type="button">Заблудились? Напишите нам!</button>
         </div>
+        </section>
 
-        <!-- Модальное окно, форма обратной связи-->
-        <!-- <div>
+      <!-- Модальное окно, форма обратной связи -->
+      <section class="modal modal-feedback">
           <form action="mail@htmlacademy.ru" method="post">
-            <button type="button"><img src="https://via.placeholder.com/21x21" alt="Закрыть"></button>
-            <label>Ваше имя</label>
-            <input type="text" placeholder="Имя Фамилия">
-            <label>Ваш e-mail:</label>
-            <input type="text" placeholder="email@example.com">
-            <label>Текст письма:</label>
-            <textarea placeholder="В свободной форме"></textarea>
-            <button type="submit">Отправить</button>
+            <div class="feedback-form">
+            <div class="input-wrap">
+              <div class="modal-description">
+                <label for="client-name">Ваше имя:</label>
+                <input class="input-info" id="client-name" type="text" name="name" placeholder="Имя Фамилия">
+              </div>
+              <div class="modal-description">
+                <label for="client-mail">Ваш e-mail:</label>
+                  <input class="input-info"
+                  id="client-mail" type="email" name="login" placeholder="email@example.com">
+              </div>
+          </div>
+        </div>
+        <div class="text-wrap">
+            <p class="modal-description message">Текст письма:</p>
+            <textarea class="input-info feedback-text" placeholder="В свободной форме"></textarea>
+        </div>
+            <div class="send-wrap">
+              <p class="button send">Отправить</p>
+            </div>
           </form>
-        </div> -->
-
-        <!-- Модальное окно, карта-->
-        <!-- <div>
-          <button type="button"><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть"></button>
-          <img src="https://via.placeholder.com/300x158" alt="г.Санкт-Петербург,ул.Б.Конюшенная,д.19/8">
-        </div> -->
-
+          <button class="modal-close" type="button" aria-label="Закрыть"></button>
       </section>
 
+      <section class="modal-map">
+        <h2 class="invisible">Как до нас добраться</h2>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A81054fa314c6467393595c517090a111ea1caa3b92ffe8738ce15c3bc8dd0251&amp;width=100%25&amp;height=449&amp;lang=ru_RU&amp;scroll=true"></script>
+        <button class="modal-close close-map" type="button" aria-label="Закрыть"></button>
+        
+    </section>
+
+      <section class="modal modal-add">
+      <div class="modal-add-wrap">
+        <span class="modal-add-description">Товар добавлен в корзину!</span>
+      </div>
+        <div class="send-wrap">
+          <div class="action-wrap">
+            <a class="button create-order" href="blank.html">Оформить заказ</a>
+            <a class="continue-buy" href="catalog.html">Продолжить покупки</a>
+          </div>
+        </div>
+        <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      </section>
     </main>
 
     <footer class="main-footer">
@@ -428,6 +453,6 @@
         </section>
       </section>  
     </footer>
-
+    <script src="../js/script.js"></script>
   </body>
 </html>

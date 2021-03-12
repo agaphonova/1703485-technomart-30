@@ -11,6 +11,7 @@
         <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
         <link rel="apple-touch-icon" href="favicon/152.png">
         <link rel="manifest" href="manifest.webmanifest">
+
     </head>
 
   <body class="page-body">
@@ -490,12 +491,18 @@
         </section>  
       </footer>
 
-    <section style="display:none">
-        <span>Товар добавлен в корзину!</span>
-        <a href="blank.html">Оформить заказ</a>
-        <button type="button">Продолжить покупки</button>
-        <button type="button"><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть"></button>
+    <section class="modal modal-add">
+      <div class="modal-add-wrap">
+        <span class="modal-add-description">Товар добавлен в корзину!</span>
+      </div>
+        <div class="send-wrap">
+          <div class="action-wrap">
+            <a class="button create-order" href="blank.html">Оформить заказ</a>
+            <a class="continue-buy" href="catalog.html">Продолжить покупки</a>
+          </div>
+        </div>
+        <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
-
+    <script src="../js/script.js"></script>
 </body>
 </html>
