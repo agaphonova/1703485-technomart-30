@@ -618,6 +618,7 @@ background: var(--basic-light-blue);
   grid-column: 1/3;
   grid-row: 2/4;
   height: 266px;
+  position: relative;
 }
 
 .slider-first {
@@ -629,6 +630,7 @@ background: var(--basic-light-blue);
   background: url("../img/drill.jpg") no-repeat;
   background-size: cover;
   display: none;
+  padding-bottom: 27px;
 }
 
 .slider-content-wrap a {
@@ -644,19 +646,19 @@ background: var(--basic-light-blue);
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 18px;
+  top: 122px;
   left: 0;
   right: 0;
   width: 92%;
   margin: 0 auto;
 }
 
-.slider-button-next, .slider-button-back {
+.next, .previous {
   background: transparent;
   cursor: pointer;
 }
 
-.slider-button-next {
+.next {
   transform: rotate(180deg);
 }
 
@@ -1070,7 +1072,7 @@ background: var(--basic-light-blue);
 }
 
 .transport-list {
-  margin-bottom: 8px;
+  margin-bottom: 27px;
 }
 
 .transport-list li {
@@ -1119,6 +1121,7 @@ background: var(--basic-light-blue);
 
 .main-footer {
   background-color: var(--basic-blue);
+
 }
 
 .footer-wrap {
@@ -1208,7 +1211,7 @@ background: var(--basic-light-blue);
 
 .map {
   margin-bottom: 25px;
-  margin-top: 16px;
+  margin-top: 32px;
 }
 
 .social {
@@ -1229,50 +1232,6 @@ background: var(--basic-light-blue);
   margin: 0 1px;
 }
 
-.modal {
-  position: fixed;
-  display: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background-color: var(--basic-white);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  border-top: 7px solid var(--modal-border);
-}
-
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 16px;
-  width: 21px;
-  height: 21px;
-  border: 0;
-  cursor: pointer;
-  background: transparent;
-}
-
-.modal-close::before,
-.modal-close::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 2px;
-  width: 27px;
-  height: 4px;
-  background-color: var(--basic-red);
-  border-radius: 2px;
-}
-
-.modal-close::before {
-  transform: rotate(45deg);
-}
-
-.modal-close::after {
-  transform: rotate(-45deg);
-}
-
 .continue-buy {
   padding: 11px 0 9px 0;
   width: 192px;
@@ -1288,27 +1247,35 @@ background: var(--basic-light-blue);
   width: 192px;
 }
 
-.modal-map {
+.modal {
   position: fixed;
-  width: 943px;
-  height: 449px;
-  border-top: 7px solid var(--modal-border);
   display: none;
-  top: 150px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  top: 0;
   margin: 0 auto;
+  right: 0;
+  left: 0;
+  background-color: var(--basic-white);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-top: 7px solid var(--modal-border);
+}
+
+.modal-map {
+  width: 943px;
+  top:150px;
+}
+
+.modal-feedback {
+  width: 620px;
+  top:150px;
 }
 
 .close-map {
-right: -26px;
-top: -8px;
+  right: -26px;
+  top: -8px;
 }
 
 .modal-add {
-  position: fixed;
+  /* position: fixed; */
   top: 150px;
   bottom: auto;
   width: 620px;
@@ -1343,12 +1310,6 @@ top: -8px;
   justify-content: space-between;
 }
 
-.modal-feedback {
-  top: 150px;
-  bottom: auto;
-  width: 620px;
-}
-
 .feedback-form {
   width: 460px;
   padding-top: 39px;
@@ -1363,6 +1324,42 @@ top: -8px;
   color: var(--basic-black);
   margin: 0;
   line-height: 24px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  width: 21px;
+  height: 21px;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+.close-map {
+  top: -9px;
+  right: -22px;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 27px;
+  height: 4px;
+  background-color: var(--basic-red);
+  border-radius: 2px;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
 }
 
 .input-info {
@@ -1389,7 +1386,6 @@ top: -8px;
   color: var(--basic-grey);
   font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 13px;
-  display: block;
 }
 
 .text-wrap {
@@ -1865,7 +1861,7 @@ top: -8px;
   outline: transparent;
 }
 
-.next {
+.next-page {
   font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 13px;
   color: var(--basic-black);

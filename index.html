@@ -71,7 +71,7 @@
 
       <nav class="main-nav">
         <ul class="nav">
-          <li><a class="nav-list-item" href="blank.html">Главная</a></li>
+          <li><a class="nav-list-item" href="index.html">Главная</a></li>
           <li><a class="nav-list-item" href="blank.html">Компания</a></li>
           <li><a class="nav-list-item" href="catalog.html">Каталог</a></li>
           <li><a class="nav-list-item" href="blank.html">Новости</a></li>
@@ -105,21 +105,17 @@
         </div>
 
         <div class="slider">
-          <div class="slider-first">
+          <div class="slider-first item">
             <div class="slider-overlay">
               <h3 class="slider-subtitle">Перфораторы</h3>
               <p class="slider-text">Настоящие мужские игрушки</p>
             </div>
             <div class="slider-content-wrap">
-              <div class="slider-button-wrap">
-                <button class= "slider-button-back" type="button"><img src="img/icon-left.svg" alt="Назад"></button>
-                <button class= "slider-button-next" type="button"><img src="img/icon-left.svg" alt="Вперед"></button>
-              </div>
               <a class="button catalog" href="blank.html">Открыть каталог</a>
             </div>
           </div>
 
-          <div class="slider-second">
+          <div class="slider-second item">
             <div class="slider-overlay">
               <h3 class="slider-subtitle">Дрели</h3>
               <p class="slider-text">Соседям на радость!</p>
@@ -127,6 +123,11 @@
             <div class="slider-content-wrap">
               <a class="button catalog" href="blank.html">Открыть каталог</a>
             </div>
+          </div>
+
+          <div class="slider-button-wrap">
+            <button class="previous" onclick="previousSlide()" type="button"><img src="img/icon-left.svg" alt="Назад"></button>
+            <button class="next" onclick="nextSlide()" type="button"><img src="img/icon-left.svg" alt="Вперед"></button>
           </div>
         </div>
 
@@ -337,59 +338,12 @@
             Вы можете забрать товар сами,<br> 
             заехав в наш офис:
           </p>
-          <a class="map" href="#">
-            <img src="img/Objectmap.png" width="300" height="158" alt="ул.Б.Конюшенная,д.19/8">
-          </a>
+
+          <img class="map" src="img/Objectmap.png" width="300" height="158" alt="ул.Б.Конюшенная,д.19/8">
+
           <button class="contact button" type="button">Заблудились? Напишите нам!</button>
         </div>
         </section>
-
-      <!-- Модальное окно, форма обратной связи -->
-      <section class="modal modal-feedback">
-          <form action="mail@htmlacademy.ru" method="post">
-            <div class="feedback-form">
-            <div class="input-wrap">
-              <div class="modal-description">
-                <label for="client-name">Ваше имя:</label>
-                <input class="input-info" id="client-name" type="text" name="name" placeholder="Имя Фамилия">
-              </div>
-              <div class="modal-description">
-                <label for="client-mail">Ваш e-mail:</label>
-                  <input class="input-info"
-                  id="client-mail" type="email" name="login" placeholder="email@example.com">
-              </div>
-          </div>
-        </div>
-        <div class="text-wrap">
-            <p class="modal-description message">Текст письма:</p>
-            <textarea class="input-info feedback-text" placeholder="В свободной форме"></textarea>
-        </div>
-            <div class="send-wrap">
-              <p class="button send">Отправить</p>
-            </div>
-          </form>
-          <button class="modal-close" type="button" aria-label="Закрыть"></button>
-      </section>
-
-      <section class="modal-map">
-        <h2 class="invisible">Как до нас добраться</h2>
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A81054fa314c6467393595c517090a111ea1caa3b92ffe8738ce15c3bc8dd0251&amp;width=100%25&amp;height=449&amp;lang=ru_RU&amp;scroll=true"></script>
-        <button class="modal-close close-map" type="button" aria-label="Закрыть"></button>
-        
-    </section>
-
-      <section class="modal modal-add">
-      <div class="modal-add-wrap">
-        <span class="modal-add-description">Товар добавлен в корзину!</span>
-      </div>
-        <div class="send-wrap">
-          <div class="action-wrap">
-            <a class="button create-order" href="blank.html">Оформить заказ</a>
-            <a class="continue-buy" href="catalog.html">Продолжить покупки</a>
-          </div>
-        </div>
-        <button class="modal-close" type="button" aria-label="Закрыть"></button>
-      </section>
     </main>
 
     <footer class="main-footer">
@@ -453,6 +407,56 @@
         </section>
       </section>  
     </footer>
-    <script src="../js/script.js"></script>
+      <!-- Модальное окно, форма обратной связи -->
+      <section class="modal modal-feedback">
+        <form action="mail@htmlacademy.ru" method="post">
+          <div class="feedback-form">
+          <div class="input-wrap">
+            <div class="modal-description">
+              <label for="client-name">Ваше имя:</label>
+              <input class="input-info" id="client-name" type="text" name="name" placeholder="Имя Фамилия">
+            </div>
+            <div class="modal-description">
+              <label for="client-mail">Ваш e-mail:</label>
+                <input class="input-info"
+                id="client-mail" type="email" name="login" placeholder="email@example.com">
+            </div>
+        </div>
+      </div>
+      <div class="text-wrap">
+          <label class="modal-description message">Текст письма:</label>
+          <textarea class="input-info feedback-text" placeholder="В свободной форме"></textarea>
+      </div>
+          <div class="send-wrap">
+            <button type="submit" class="button send">Отправить</button>
+          </div>
+        </form>
+        <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      </section>
+
+    <section class="modal modal-map">
+      <h2 class="invisible">Как до нас добраться</h2>
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A81054fa314c6467393595c517090a111ea1caa3b92ffe8738ce15c3bc8dd0251&amp;width=100%25&amp;height=449&amp;lang=ru_RU&amp;scroll=true"></script>
+      <button class="modal-close close-map" type="button" aria-label="Закрыть"></button>
+    </section>
+
+    <section class="modal modal-add">
+    <div class="modal-add-wrap">
+      <span class="modal-add-description">Товар добавлен в корзину!</span>
+    </div>
+      <div class="send-wrap">
+        <div class="action-wrap">
+          <a class="button create-order" href="blank.html">Оформить заказ</a>
+          <a class="continue-buy" href="catalog.html">Продолжить покупки</a>
+        </div>
+      </div>
+      <button class="modal-close modal-busket-close" type="button" aria-label="Закрыть"></button>
+    </section>
+
+    <script src="js/slider.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/mapFeedback.js"></script>
+
+
   </body>
 </html>
