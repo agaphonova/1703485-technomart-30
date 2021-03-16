@@ -643,6 +643,10 @@ background: var(--basic-light-blue);
 }
 
 .slider-controls .current-slide {
+  background-color: var(--basic-red);
+}
+
+.current-slide.active {
   background-color: var(--basic-white);
 }
 
