@@ -1,5 +1,3 @@
-
-
 const mapLink = document.querySelector(".map");
 const mapPopup = document.querySelector(".modal-map");
 const mapClose = mapPopup.querySelector(".close-map");
@@ -7,7 +5,7 @@ const mapClose = mapPopup.querySelector(".close-map");
 const contactLink = document.querySelector(".contact");
 const contactPopup = document.querySelector(".modal-feedback");
 const contactClose = contactPopup.querySelector(".modal-close");
-const userName = contactPopup.querySelector ("[name=name]")
+const userName = contactPopup.querySelector("[name='name']")
 
 
 mapLink.addEventListener("click", function () {
@@ -48,8 +46,3 @@ window.addEventListener("keydown", function (evt) {
   }
 
 });
-
-
-
-
-
