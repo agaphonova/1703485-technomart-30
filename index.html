@@ -131,8 +131,8 @@
           </div>
         
           <div class="slider-controls">
-            <button class="current-slide" onclick="currentSlide(1)" type="button" aria-label="Первый слайд"></button>
-            <button class="current-slide" type="button" onclick="currentSlide(2)"  aria-label="Второй слайд"></button>
+            <button class="current-slide" onclick="prevCurrentSlide()" type="button" aria-label="Первый слайд"></button>
+            <button class="current-slide" type="button" onclick="nextCurrentSlide()"  aria-label="Второй слайд"></button>
           </div>
         </div>
 
@@ -359,7 +359,7 @@
         <section class="footer-nav">
 
           <div>
-            <a class="button footer-logo" href="blank.html">
+            <a class="button footer-logo" href="index.html">
               <img src="img/logo-technomart.svg" width="138" height="23" alt="логотип «Техномарт»">
             </a>
           </div>
@@ -417,7 +417,7 @@
     </footer>
       <!-- Модальное окно, форма обратной связи -->
       <section class="modal modal-feedback">
-        <form action="mail@htmlacademy.ru" method="post">
+        <form class="form-feedback" action="https://echo.htmlacademy.ru/" method="post">
           <div class="feedback-form">
           <div class="input-wrap">
             <div class="modal-description">
@@ -433,7 +433,7 @@
       </div>
       <div class="text-wrap">
           <label for="client-feedback" class="modal-description message">Текст письма:</label>
-          <textarea class="input-info feedback-text" id="client-feedback" placeholder="В свободной форме"></textarea>
+          <textarea class="input-info feedback-text" id="client-feedback" placeholder="В свободной форме" name="comment"></textarea>
       </div>
           <div class="send-wrap">
             <button type="submit" class="button send">Отправить</button>
@@ -465,7 +465,7 @@
 
     <script src="js/slider.js"></script>
     <script src="js/card.js"></script>
-    <script src="js/mapFeedback.js"></script>
+    <script src="js/mapfeedback.js"></script>
 
 
   </body>

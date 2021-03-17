@@ -5,7 +5,9 @@ const mapClose = mapPopup.querySelector(".close-map");
 const contactLink = document.querySelector(".contact");
 const contactPopup = document.querySelector(".modal-feedback");
 const contactClose = contactPopup.querySelector(".modal-close");
-const userName = contactPopup.querySelector("[name='name']")
+const contactName = contactPopup.querySelector("[name='name']")
+const contactLogin = contactPopup.querySelector("[name='login']")
+const contactForm = contactPopup.querySelector(".form-feedback");
 
 
 mapLink.addEventListener("click", function () {
@@ -19,13 +21,27 @@ mapClose.addEventListener("click", function () {
 
 contactLink.addEventListener("click", function () {
   contactPopup.classList.add("modal-show");
-  userName.focus();
+  contactName.focus();
 });
 
 contactClose.addEventListener("click", function () {
   contactPopup.classList.remove("modal-show");
+  contactPopup.classList.remove("modal-error");
 });
 
+contactForm.addEventListener("submit", function (evt) {
+  if (!contactName.value || !contactLogin.value) {
+    evt.preventDefault();
+    contactPopup.classList.remove("modal-error");
+    contactPopup.offsetWidth = contactPopup.offsetWidth;
+    contactPopup.classList.add("modal-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("contact", contactName.value);
+    }
+  }
+
+});
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
@@ -42,6 +58,7 @@ window.addEventListener("keydown", function (evt) {
     if (contactPopup.classList.contains("modal-show")) {
       evt.preventDefault();
       contactPopup.classList.remove("modal-show");
+      contactPopup.classList.remove("modal-error");
     }
   }
 

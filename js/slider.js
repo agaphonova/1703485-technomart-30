@@ -11,6 +11,14 @@ function previousSlide() {
     showSlides(slideIndex -= 1);
 }
 
+function nextCurrentSlide() {
+    showSlides(slideIndex += 1);
+}
+
+function prevCurrentSlide() {
+    showSlides(slideIndex -= 1);
+}
+
 function showSlides(n) {
     let slides = document.getElementsByClassName("item");
     let dots = document.getElementsByClassName("current-slide");
@@ -45,10 +53,10 @@ var jsTriggers = document.querySelectorAll('.benefit-trigger'),
             activeTrigger = document.querySelector('.benefit-trigger.active'),
             activeContent = document.querySelector('.benefit-item.active');
         
-        activeTrigger.classList.remove('active'); // 1
-        trigger.classList.add('active'); // 2
+        activeTrigger.classList.remove('active');
+        trigger.classList.add('active');
         
-        activeContent.classList.remove('active'); // 3
-        content.classList.add('active'); // 4
+        activeContent.classList.remove('active');
+        content.classList.add('active');
    });
 });
