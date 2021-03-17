@@ -11,13 +11,9 @@ function previousSlide() {
     showSlides(slideIndex -= 1);
 }
 
-function nextCurrentSlide() {
-    showSlides(slideIndex += 1);
-}
-
-function prevCurrentSlide() {
-    showSlides(slideIndex -= 1);
-}
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
 
 function showSlides(n) {
     let slides = document.getElementsByClassName("item");
