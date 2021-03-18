@@ -643,11 +643,11 @@ background: var(--basic-light-blue);
 }
 
 .slider-controls .current-slide {
-  background-color: var(--basic-red);
+  background-color: var(--basic-white);
 }
 
 .current-slide.active {
-  background-color: var(--basic-white);
+  background-color: var(--basic-red);
 }
 
 .slider-first {
@@ -1301,6 +1301,7 @@ background: var(--basic-light-blue);
   background-color: var(--basic-white);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border-top: 7px solid var(--modal-border);
+  z-index: 999;
 }
 
 .container-iframe {
