@@ -1668,7 +1668,7 @@ background: var(--basic-light-blue);
 }
 
 .filter-input-checkbox:checked + label::after {
-  content: url('../img/shape.svg');
+  content: url('../img/check.svg');
   position: absolute;
   background-size: contain;
   overflow: visible;
