@@ -435,6 +435,9 @@ background: var(--basic-light-blue);
 .nav {
   font-size: 18px;
   list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
 }
 
 .nav li {
@@ -443,7 +446,7 @@ background: var(--basic-light-blue);
 
 .nav-list-item {
   color: var(--basic-white);
-  padding: 16px 39px 20px 13px;
+  padding: 18px 28px;
   display: inline-block;
   line-height: 24px;
 }
