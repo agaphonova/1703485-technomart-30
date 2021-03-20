@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/152.png">
@@ -126,8 +126,8 @@
           </div>
 
           <div class="slider-button-wrap">
-            <button class="previous" onclick="previousSlide()" type="button"><img src="img/icon-left.svg" alt="Назад"></button>
-            <button class="next" onclick="nextSlide()" type="button"><img src="img/icon-left.svg" alt="Вперед"></button>
+            <button class="previous" onclick="previousSlide()" type="button"><img src="img/icon-left.svg" width="21" height="39" alt="Назад"></button>
+            <button class="next" onclick="nextSlide()" type="button"><img src="img/icon-left.svg" width="21" height="39" alt="Вперед"></button>
           </div>
         
           <div class="slider-controls">
@@ -150,13 +150,12 @@
 
       <section class="products">
         <div class="row">
-          <h2 class="subject popular">Популярные товары</h2>
+          <h2 class="subject popular">Популярные товары:</h2>
           <a class="button catalog" href="catalog.html">Все популярные товары</a>
         </div>  
       
         <section class="filter-result">
           <div class="product-item-wrap">
-
             <a class="product-item" href="blank.html">
               
                 <div class="img-wrap">
@@ -202,7 +201,6 @@
 
           <div class="product-item-wrap">
             <a class="product-item" href="blank.html">
-              <div class="product-item-wrap">
                 <div class="img-wrap">
                   <img src="img/bosch6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                 </div>
@@ -213,7 +211,6 @@
                 </p>
                 <span class="full-price">30500 Р.</span>
                 <span class="button discount-price">25500 P.</span>
-              </div>
             </a>
             <div class="hover-wrap">
               <a class="buy" href="blank.html">Купить</a>
@@ -224,7 +221,6 @@
 
         <div class="product-item-wrap">
             <a class="product-item" href="blank.html">
-              <div class="product-item-wrap">
                 <span class="new">new</span>
                 <div class="img-wrap">
                     <img src="img/bosch20003000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
@@ -235,7 +231,6 @@
                 </p>
                 <span class="full-price">22500 Р.</span>
                 <span class="button discount-price">12500 P.</span>
-              </div>
             </a>
             <div class="hover-wrap">
               <a class="buy" href="blank.html">Купить</a>
@@ -249,7 +244,7 @@
 
       <section class="partners">
         <div class="row-partners">
-          <h2 class="subject popular">Популярные производители</h2>
+          <h2 class="subject popular">Популярные производители:</h2>
           <a class="button catalog" href="blank.html">Все производители</a>
         </div>
         <section class="partner-item-list">
@@ -349,7 +344,7 @@
 
           <img class="map" src="img/objectmap.png" width="300" height="158" alt="ул.Б.Конюшенная,д.19/8">
 
-          <button class="contact button" type="button">Заблудились? Напишите нам!</button>
+          <a class="contact button" href="form.html">Заблудились? Напишите нам!</a>
         </div>
         </section>
     </main>
@@ -409,7 +404,7 @@
         </div>
 
         <div class="connect">
-          <span class="contact-caption">Разработано-</span>
+          <span class="contact-caption">Разработано —</span>
           <a class="contact-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </div>
         </section>
@@ -445,7 +440,8 @@
     <section class="modal modal-map">
       <h2 class="invisible">Как до нас добраться</h2>
       <div class="container-iframe">
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1EIDubnSAkjwCKb_2QOL8a0wjjxhoEICf" width="943" height="480"></iframe>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1EIDubnSAkjwCKb_2QOL8a0wjjxhoEICf" width="943" height="449"></iframe>
+        <img class="map-img" src="img/map.jpg" width="943" height="auto" alt="карта">
       </div>
       <button class="modal-close close-map" type="button" aria-label="Закрыть"></button>
     </section>
@@ -463,10 +459,9 @@
       <button class="modal-close modal-busket-close" type="button" aria-label="Закрыть"></button>
     </section>
 
-    <script src="js/slider.js"></script>
-    <script src="js/card.js"></script>
-    <script src="js/feedback.js"></script>
-
+    <script src="js/slider.min.js"></script>
+    <script src="js/card.min.js"></script>
+    <script src="js/feedback.min.js"></script>
 
   </body>
 </html>

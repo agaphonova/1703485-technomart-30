@@ -9,7 +9,6 @@ const contactName = contactPopup.querySelector("[name='name']")
 const contactLogin = contactPopup.querySelector("[name='login']")
 const contactForm = contactPopup.querySelector(".form-feedback");
 
-
 mapLink.addEventListener("click", function () {
   mapPopup.classList.add("modal-show");
 });
@@ -18,8 +17,8 @@ mapClose.addEventListener("click", function () {
   mapPopup.classList.remove("modal-show");
 });
 
-
-contactLink.addEventListener("click", function () {
+contactLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
   contactPopup.classList.add("modal-show");
   contactName.focus();
 });
@@ -40,7 +39,6 @@ contactForm.addEventListener("submit", function (evt) {
       localStorage.setItem("contact", contactName.value);
     }
   }
-
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -50,7 +48,6 @@ window.addEventListener("keydown", function (evt) {
       mapPopup.classList.remove("modal-show");
     }
   }
-
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -61,5 +58,4 @@ window.addEventListener("keydown", function (evt) {
       contactPopup.classList.remove("modal-error");
     }
   }
-
 });

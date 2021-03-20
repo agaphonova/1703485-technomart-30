@@ -4,7 +4,7 @@ const buyPopup = document.querySelector(".modal-add");
 const buyClose = buyPopup.querySelector(".modal-busket-close");
 
 buyLink.forEach(function(item){
-  item.addEventListener('click', function(evt) {
+  item.addEventListener("click", function(evt) {
   evt.preventDefault();
 buyPopup.classList.add("modal-show");
 });
